@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="Css/reset.css">
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="Css/main.css">
+    <link rel="stylesheet" href="Css/footer.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo-txt">Logo Site</h1>
+
+        <div>
+            <span id="icone-menu" class="material-symbols-outlined">menu</span>
+        </div>
+
+        <nav class="menu">
+            <ul class="lista-menu">
+                <li class="item-menu">
+                    <a href="#doces" class="link-menu">Doces</a>
+                </li>
+                <li class="item-menu">
+                    <a href="#bolos" class="link-menu">Bolos</a>
+                </li>
+                <li class="item-menu">
+                    <a href="#" class="link-menu">Clientes</a>
+                </li>
+                <li class="item-menu">
+                    <a href="#" class="link-menu">Fale Conosco</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrossel" id="carrossel">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/cake11.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/cake22.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/COXINHA.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/doce22.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/esfirra.jpg" alt="">
+                  </div>
+                </div>
+            </div>
+            
+            <h2 class="titulo-carrossel">Kit Festa da Vovó Mara</h2>
+            <a href="https://api.whatsapp.com/send?phone=5592985408438&text=Quero%20o%20Kit" 
+            target="_blank"class="link-carrossel">Clique e peça!</a>
+
+        
+        </section>
+
+        <section class="kit">
+            <div class="div-kit">
+                <img src="img/CAKE.svg" alt="" class="img-kit">
+                <h3 class="titulo-kit">1 Bolo</h3>
+            </div>
+            <div class="div-kit">
+                <img src="img/doce.svg" alt="" class="img-kit">
+                <h3 class="titulo-kit">50 Doces</h3>
+            </div>
+            <div class="div-kit">
+                <img src="img/pizza.svg" alt="" class="img-kit">
+                <h3 class="titulo-kit">2 Pizzas</h3>
+            </div>
+            <div class="div-kit">
+                <img src="img/refri.svg" alt="" class="img-kit">
+                <h3 class="titulo-kit">2 Refri's</h3>
+            </div>
+        </section>
+        <section class="bolos" id="bolos">
+            <div class="div-bolos">
+                <img src="img/cake11.jpg" alt="" class="img-bolos">
+            </div>
+            <div class="div-bolos">
+                <h3>Bolos Saborosos</h3>
+                <ul>
+                    <li>Sabor Laranja</li>
+                    <li>Sabor Chocolate</li>
+                    <li>Sabor Limão</li>
+                    <li>Sabor Morango</li>
+                    <li>Sabor Maracujá</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bolos" id="doces">
+            <div class="div-bolos" style="order: 2;">
+                <img src="img/doce22.jpg" alt="" class="img-bolos">
+            </div>
+            <div class="div-bolos">
+                <h3>Doces Saborosos</h3>
+                <ul>
+                    <li>Beijinho</li>
+                    <li>Chocolate</li>
+                    <li>Castanha</li>
+                    <li>Morango</li>
+                    <li>Cupuaçu</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="div-footer">
+            <h1 class="txt-footer">S-Eventos</h1>
+        </div>
+        <div class="div-footer">
+            <ul class="lista-footer">
+                <li class="item-footer">
+                    <img src="img/Facebook_logo.png" alt="" class="img-footer"></li>
+                <li class="item-footer">
+                    <img src="img/Instagram-Icon.png" alt="" class="img-footer"></li>
+                <li class="item-footer">
+                    <img src="img/twitter.png" alt="" class="img-footer"></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <script> 
+        const menu = document.getElementById('icone-menu');
+        const link = document.getElementsByClassName('item-menu');
+   
+        menu.addEventListener('click',()=>{
+            for(i=0;i<=link.length;i++){
+                link[i].classList.toggle('ativar');
+            }
+        })
+    </script>   
+</body>
+</html>
